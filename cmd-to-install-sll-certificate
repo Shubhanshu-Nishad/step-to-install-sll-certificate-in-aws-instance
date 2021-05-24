@@ -1,0 +1,56 @@
+Everything you need to know about WordPress on AWS with SSL, DNS & FTP setup, Detailed Guide 
+
+AWS tutorial for beginner, Free SSL setup, aws route 53
+
+Download putty
+https://putty.org
+
+
+Download WinSCP
+https://winscp.net/eng/download.php
+
+
+Command for SSL certificate
+sudo /opt/bitnami/bncert-tool
+
+Command for Remove AWS tag
+sudo /opt/bitnami/apps/wordpress/bnconfig.disabled --disable_banner 1
+
+To Renew The Let’s Encrypt Certificate run following command
+Please replace EMAIL-ADDRESS and DOMAIN with your data
+-
+sudo /opt/bitnami/ctlscript.sh stop
+sudo /opt/bitnami/letsencrypt/lego --tls --email="EMAIL-ADDRESS" --domains="DOMAIN" --path="/opt/bitnami/letsencrypt" renew --days 90
+sudo /opt/bitnami/ctlscript.sh start
+-
+find more info at 
+https://docs.bitnami.com/aws/how-to/g...
+
+
+Topic Covered:
+Installing WordPress
+Back end Access
+DNS(Route 53) Creation
+Connection with Domain
+Installing SSL with WWW and Non-WWW
+FTP setup to your AWS WordPress
+AWS tag removal
+
+Visit : https://lastarcher.net
+ for more info
+What's in this tutorial?
+
+Amazon Elastic Compute Cloud (Amazon EC2) is a cloud service that provides resizeable compute capacity in the cloud. It is designed for developers to scale and monitor their web-application better way.
+Amazon EC2 provides some advanced features like elastic IPs, Load Balancing, various platforms like (Linux, windows, etc.), scaling, monitoring, etc. It is also easy for developers to manage their web-application in a better way.
+
+Hosting WordPress on AWS is a smart choice because as compare to other VPS provider Amazon have low pricing, more features, and other related amazing services. Also, they charge you per hour your instance run.
+
+So, in this tutorial, I’ll show you how you can set up a WordPress on EC2, FTP Setup, installing SSL  and DNS Creation 
+
+Why Choose Amazon Cloud?
+
+In the cloud industry, Amazon Cloud is known for its reliability and uptime. Many of its data centre locations have almost 100 percent uptime. This means websites hosted on Amazon will seldom go down. Amazon Web Services (AWS) is perhaps the most popular cloud hosting provider today.
+
+Facebook, the social media giant home to profiles of more than 2 billion people, hosts the bulk of its business infrastructure on Amazon Web Services, which should give you an idea of the robustness of Amazon’s cloud service.
+
+This step-by-step guide will help you to manage your host ultimately, which is different from cPanel.
